@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash | Backend Architect</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for standalone usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#F2F2F2',
+                        primary: '#232323',
+                        accent: '#38FF62',
+                    },
+                    fontFamily: {
+                        mono: ['Space Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#F2F2F2] text-[#232323]">
+
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="header-logo hover:opacity-70 transition-opacity">
+                    PRAKASH<span class="text-[#38FF62]">.</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#tech" class="nav-link">Tech Stack</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Desktop Socials -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#" class="text-[#232323] hover:text-[#38FF62] transition-colors"><i data-lucide="github" class="w-[18px]"></i></a>
+                    <a href="#" class="text-[#232323] hover:text-[#38FF62] transition-colors"><i data-lucide="linkedin" class="w-[18px]"></i></a>
+                    <a href="#contact" class="btn-accent text-xs py-2 px-4">HIRE ME</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-[#232323]">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 right-0 bg-[#F2F2F2] border-b border-[#232323]/10 md:hidden">
+            <nav class="flex flex-col py-4">
+                <a href="#about" class="nav-link py-3 px-6">About</a>
+                <a href="#experience" class="nav-link py-3 px-6">Experience</a>
+                <a href="#projects" class="nav-link py-3 px-6">Projects</a>
+                <a href="#tech" class="nav-link py-3 px-6">Tech Stack</a>
+                <a href="#contact" class="nav-link py-3 px-6">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="min-h-screen flex flex-col justify-center relative pt-20">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="max-w-5xl">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-2 h-2 bg-[#38FF62] animate-pulse"></span>
+                        <span class="label text-[#232323]/70">Available for opportunities</span>
+                    </div>
+
+                    <h1 class="hero-title mb-6">
+                        I Architect<br />
+                        <span class="text-[#38FF62]">Backend</span> Systems<br />
+                        That Scale
+                    </h1>
+
+                    <p class="text-big text-[#232323]/70 mb-12 max-w-2xl">
+                        Java • Spring Boot • Microservices • System Design
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 mb-16">
+                        <a href="#contact" class="btn-accent flex items-center gap-2">
+                            Let's Talk <i data-lucide="arrow-up-right" class="w-4"></i>
+                        </a>
+                        <a href="#" class="btn-primary flex items-center gap-2">
+                            View LinkedIn <i data-lucide="arrow-up-right" class="w-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 py-8 border-t border-[#232323]/10">
+                        <div>
+                            <span class="text-4xl md:text-5xl font-bold text-[#232323] font-mono">2+</span>
+                            <p class="label-small mt-2">Years Experience</p>
+                        </div>
+                        <div>
+                            <span class="text-4xl md:text-5xl font-bold text-[#232323] font-mono">100+</span>
+                            <p class="label-small mt-2">REST APIs Built</p>
+                        </div>
+                        <div>
+                            <span class="text-4xl md:text-5xl font-bold text-[#232323] font-mono">3</span>
+                            <p class="label-small mt-2">Production Platforms</p>
+                        </div>
+                        <div>
+                            <span class="text-4xl md:text-5xl font-bold text-[#232323] font-mono">45%</span>
+                            <p class="label-small mt-2">Friction Reduced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#232323]/50 hover:text-[#38FF62] transition-colors cursor-pointer">
+                <span class="label-small">Scroll</span>
+                <i data-lucide="arrow-down" class="animate-bounce w-5"></i>
+            </button>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section bg-white border-y border-[#232323]/10">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#232323]"></span>
+                    <span class="label">About Me</span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 md:gap-24">
+                    <div>
+                        <h2 class="title-big mb-6">Engineering Value,<br />Not Just Code</h2>
+                        <p class="text-body text-lg mb-8">
+                            Backend Engineer with 2+ years of experience building scalable FinTech and Healthcare platforms. I specialize in architecting high-performance microservices using Java, Spring Boot, and Kafka.
+                        </p>
+                        <blockquote class="border-l-2 border-[#38FF62] pl-6 py-2 mb-8">
+                            <p class="text-regular italic text-[#232323]/80">
+                                "I don't just write code; I design systems that are resilient, containerized, and ready for growth."
+                            </p>
+                        </blockquote>
+                        <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+                            Get In Touch <i data-lucide="arrow-right" class="w-4"></i>
+                        </a>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="label text-[#232323]/50 mb-4">What I Bring</h3>
+                        
+                        <!-- About Items -->
+                        <div class="sharp-card flex items-start gap-4">
+                            <span class="flex-shrink-0 w-6 h-6 bg-[#38FF62] flex items-center justify-center text-[#232323] font-mono text-xs">01</span>
+                            <p class="text-body">Designed database schemas (ERD) and REST APIs handling high-volume transactions.</p>
+                        </div>
+                        <div class="sharp-card flex items-start gap-4">
+                            <span class="flex-shrink-0 w-6 h-6 bg-[#38FF62] flex items-center justify-center text-[#232323] font-mono text-xs">02</span>
+                            <p class="text-body">Implemented RBAC/ABAC and Auth0 for secure regulated industries.</p>
+                        </div>
+                        <div class="sharp-card flex items-start gap-4">
+                            <span class="flex-shrink-0 w-6 h-6 bg-[#38FF62] flex items-center justify-center text-[#232323] font-mono text-xs">03</span>
+                            <p class="text-body">Built systems that are resilient, containerized, and ready for growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#232323]"></span>
+                    <span class="label">Experience</span>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-8 md:gap-16">
+                    <div class="md:col-span-4">
+                        <h2 class="title-big mb-4">Building<br /><span class="text-[#38FF62]">Production</span><br />Systems</h2>
+                        <p class="text-body">From healthcare platforms to fintech solutions, I've shipped code that impacts real users.</p>
+                    </div>
+
+                    <div class="md:col-span-8 space-y-4">
+                        <!-- Experience Item 1 -->
+                        <div class="sharp-card experience-item active" data-id="1">
+                            <button class="w-full text-left exp-header">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="label-small text-[#38FF62]">01</span>
+                                            <h3 class="text-regular font-medium">Software Engineer</h3>
+                                        </div>
+                                        <div class="flex flex-wrap items-center gap-4 text-[#232323]/60">
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="building" class="w-3"></i> OneDAO</span>
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="map-pin" class="w-3"></i> Remote (NZ)</span>
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="calendar" class="w-3"></i> Jun 2025 - Present</span>
+                                        </div>
+                                    </div>
+                                    <div class="exp-icon flex-shrink-0 w-8 h-8 border border-[#232323]/20 flex items-center justify-center">
+                                        <i data-lucide="chevron-up" class="w-4"></i>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="exp-content mt-6 pt-6 border-t border-[#232323]/10">
+                                <div class="space-y-4 mb-6">
+                                    <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                        <div><span class="label-small text-[#232323]/50 block mb-1">Problem</span><p class="text-[#232323]/70">Building a crowdfunding platform from scratch.</p></div>
+                                        <div><span class="label-small text-[#232323]/50 block mb-1">Solution</span><p class="text-[#232323]/70">Designed ERD and microservices architecture.</p></div>
+                                        <div><span class="label-small text-[#38FF62] block mb-1">Impact</span><p class="text-[#232323]">Established scalable foundation.</p></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">Java</span>
+                                    <span class="badge">Spring Boot</span>
+                                    <span class="badge">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Experience Item 2 -->
+                         <div class="sharp-card experience-item" data-id="2">
+                            <button class="w-full text-left exp-header">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="label-small text-[#38FF62]">02</span>
+                                            <h3 class="text-regular font-medium">Software Developer</h3>
+                                        </div>
+                                        <div class="flex flex-wrap items-center gap-4 text-[#232323]/60">
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="building" class="w-3"></i> Ekikrit Health</span>
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="map-pin" class="w-3"></i> San Francisco</span>
+                                            <span class="flex items-center gap-1 text-sm"><i data-lucide="calendar" class="w-3"></i> Mar 2023 - Sep 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="exp-icon flex-shrink-0 w-8 h-8 border border-[#232323]/20 flex items-center justify-center">
+                                        <i data-lucide="chevron-down" class="w-4"></i>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="exp-content hidden mt-6 pt-6 border-t border-[#232323]/10">
+                                <div class="space-y-4 mb-6">
+                                    <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                        <div><span class="label-small text-[#232323]/50 block mb-1">Problem</span><p class="text-[#232323]/70">High friction in appointment booking.</p></div>
+                                        <div><span class="label-small text-[#232323]/50 block mb-1">Solution</span><p class="text-[#232323]/70">Migrated monolith to microservices.</p></div>
+                                        <div><span class="label-small text-[#38FF62] block mb-1">Impact</span><p class="text-[#232323]">45% reduction in friction.</p></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">Java</span>
+                                    <span class="badge">MySQL</span>
+                                    <span class="badge">Microservices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section bg-white border-y border-[#232323]/10">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#232323]"></span>
+                    <span class="label">Projects</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <h2 class="title-big">Selected<br /><span class="text-[#38FF62]">Work</span></h2>
+                    <p class="text-body max-w-md md:text-right">Backend-heavy projects solving real business problems with scalable architectures.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="sharp-card flex flex-col h-full group">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="label-small text-[#38FF62]">Project 01</span>
+                            <a href="#" class="w-8 h-8 border border-[#232323]/20 flex items-center justify-center hover:bg-[#232323] hover:text-white transition-colors"><i data-lucide="github" class="w-4"></i></a>
+                        </div>
+                        <h3 class="text-regular font-medium mb-3">Crowdfunding Platform</h3>
+                        <p class="text-body text-sm mb-4 flex-grow">Full-stack fintech platform enabling users to invest in startups with secure payment processing.</p>
+                        <div class="mb-4"><span class="bg-[#232323] text-white font-mono text-xs px-2 py-1">Lead Backend</span></div>
+                        <div class="mb-4">
+                            <span class="label-small text-[#232323]/50 block mb-2">Key Challenges</span>
+                            <ul class="space-y-1">
+                                <li class="text-xs text-[#232323]/70 flex items-start gap-2"><span class="w-1 h-1 bg-[#38FF62] mt-1.5 flex-shrink-0"></span>Stripe Integration</li>
+                                <li class="text-xs text-[#232323]/70 flex items-start gap-2"><span class="w-1 h-1 bg-[#38FF62] mt-1.5 flex-shrink-0"></span>KYC Compliance</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-auto">
+                            <span class="badge">Spring Boot</span>
+                            <span class="badge">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="sharp-card flex flex-col h-full group">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="label-small text-[#38FF62]">Project 02</span>
+                            <a href="#" class="w-8 h-8 border border-[#232323]/20 flex items-center justify-center hover:bg-[#232323] hover:text-white transition-colors"><i data-lucide="github" class="w-4"></i></a>
+                        </div>
+                        <h3 class="text-regular font-medium mb-3">Ayurveda Platform</h3>
+                        <p class="text-body text-sm mb-4 flex-grow">Integrative platform connecting patients with practitioners.</p>
+                        <div class="mb-4"><span class="bg-[#232323] text-white font-mono text-xs px-2 py-1">Backend Dev</span></div>
+                        <div class="mb-4">
+                            <span class="label-small text-[#232323]/50 block mb-2">Key Challenges</span>
+                            <ul class="space-y-1">
+                                <li class="text-xs text-[#232323]/70 flex items-start gap-2"><span class="w-1 h-1 bg-[#38FF62] mt-1.5 flex-shrink-0"></span>EHR Modules</li>
+                                <li class="text-xs text-[#232323]/70 flex items-start gap-2"><span class="w-1 h-1 bg-[#38FF62] mt-1.5 flex-shrink-0"></span>Microservices</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-auto">
+                            <span class="badge">Java</span>
+                            <span class="badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK SECTION -->
+        <section id="tech" class="section">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#232323]"></span>
+                    <span class="label">Tech Stack</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <h2 class="title-big">Tools of<br /><span class="text-[#38FF62]">The Trade</span></h2>
+                    <p class="text-body max-w-md md:text-right">Technologies I use daily to build reliable, scalable backend systems.</p>
+                </div>
+
+                <!-- Tabs -->
+                <div class="w-full">
+                    <div class="flex flex-wrap gap-2 mb-8" id="tech-tabs">
+                        <button class="tab-btn active" data-tab="backend">Backend</button>
+                        <button class="tab-btn" data-tab="database">Databases</button>
+                        <button class="tab-btn" data-tab="devops">DevOps</button>
+                    </div>
+
+                    <div id="backend" class="tab-content active grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">Spring Boot</h3><p class="text-xs text-[#232323]/60 mt-1">REST APIs, Microservices</p></div>
+                            <span class="bg-[#38FF62] text-[#232323] font-mono text-[10px] px-2 py-0.5">Expert</span>
+                        </div>
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">Spring Security</h3><p class="text-xs text-[#232323]/60 mt-1">JWT, OAuth2.0</p></div>
+                            <span class="bg-[#38FF62] text-[#232323] font-mono text-[10px] px-2 py-0.5">Expert</span>
+                        </div>
+                    </div>
+
+                    <div id="database" class="tab-content hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">PostgreSQL</h3><p class="text-xs text-[#232323]/60 mt-1">Complex queries, Indexing</p></div>
+                            <span class="bg-[#232323] text-white font-mono text-[10px] px-2 py-0.5">Proficient</span>
+                        </div>
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">Redis</h3><p class="text-xs text-[#232323]/60 mt-1">Caching, Pub/Sub</p></div>
+                            <span class="bg-[#232323]/70 text-white font-mono text-[10px] px-2 py-0.5">Intermediate</span>
+                        </div>
+                    </div>
+                    
+                    <div id="devops" class="tab-content hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">Docker</h3><p class="text-xs text-[#232323]/60 mt-1">Containerization</p></div>
+                            <span class="bg-[#232323] text-white font-mono text-[10px] px-2 py-0.5">Proficient</span>
+                        </div>
+                        <div class="sharp-card flex items-start justify-between">
+                            <div><h3 class="font-medium">Kafka</h3><p class="text-xs text-[#232323]/60 mt-1">Event Streaming</p></div>
+                            <span class="bg-[#232323]/70 text-white font-mono text-[10px] px-2 py-0.5">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SYSTEM THINKING (Dark Section) -->
+        <section id="system" class="section bg-[#232323] text-[#F2F2F2]">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#F2F2F2]/50"></span>
+                    <span class="label text-[#F2F2F2]/50">System Thinking</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <h2 class="title-big text-[#F2F2F2]">Beyond<br /><span class="text-[#38FF62]">Code</span></h2>
+                    <p class="text-body text-[#F2F2F2]/70 max-w-md md:text-right">I think in systems, not just functions.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border border-[#F2F2F2]/10 p-6 md:p-8 hover:border-[#38FF62]/50 transition-colors group">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 border border-[#38FF62] flex items-center justify-center text-[#38FF62] group-hover:bg-[#38FF62] group-hover:text-[#232323] transition-colors">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+                            <div>
+                                <span class="label-small text-[#38FF62] block mb-1">01</span>
+                                <h3 class="text-regular text-[#F2F2F2] font-medium">Scalability</h3>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-[#38FF62]"></span><span class="text-sm text-[#F2F2F2]/60">Horizontal scaling</span></div>
+                            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-[#38FF62]"></span><span class="text-sm text-[#F2F2F2]/60">Database optimization</span></div>
+                        </div>
+                    </div>
+
+                    <div class="border border-[#F2F2F2]/10 p-6 md:p-8 hover:border-[#38FF62]/50 transition-colors group">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 border border-[#38FF62] flex items-center justify-center text-[#38FF62] group-hover:bg-[#38FF62] group-hover:text-[#232323] transition-colors">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <div>
+                                <span class="label-small text-[#38FF62] block mb-1">02</span>
+                                <h3 class="text-regular text-[#F2F2F2] font-medium">Reliability</h3>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-[#38FF62]"></span><span class="text-sm text-[#F2F2F2]/60">Circuit breakers</span></div>
+                            <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-[#38FF62]"></span><span class="text-sm text-[#F2F2F2]/60">Graceful degradation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section bg-white">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-8 h-[1px] bg-[#232323]"></span>
+                    <span class="label">Contact</span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 md:gap-24">
+                    <div>
+                        <h2 class="title-big mb-6">Let's<br /><span class="text-[#38FF62]">Connect</span></h2>
+                        <p class="text-body mb-8">Open to discussing backend challenges, system design problems, or interesting engineering opportunities.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <a href="mailto:email@example.com" class="flex items-center gap-4 p-4 border border-[#232323]/10 hover:border-[#232323] transition-colors group">
+                                <div class="w-10 h-10 bg-[#38FF62] flex items-center justify-center text-[#232323]"><i data-lucide="mail" class="w-4"></i></div>
+                                <div><span class="label-small text-[#232323]/50 block mb-1">Email</span><span class="text-sm">prakash@example.com</span></div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 p-4 border border-[#232323]/10 hover:border-[#232323] transition-colors group">
+                                <div class="w-10 h-10 bg-[#232323] flex items-center justify-center text-white"><i data-lucide="linkedin" class="w-4"></i></div>
+                                <div><span class="label-small text-[#232323]/50 block mb-1">LinkedIn</span><span class="text-sm">/in/prakashbisht</span></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="sharp-card p-6 md:p-8">
+                            <h3 class="text-regular font-medium mb-6">Send a Message</h3>
+                            <form class="space-y-6">
+                                <div>
+                                    <label class="label-small text-[#232323]/50 block mb-2">Name</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-[#232323]/20 bg-transparent focus:border-[#232323] outline-none transition-colors text-sm" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="label-small text-[#232323]/50 block mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-[#232323]/20 bg-transparent focus:border-[#232323] outline-none transition-colors text-sm" placeholder="your@email.com">
+                                </div>
+                                <div>
+                                    <label class="label-small text-[#232323]/50 block mb-2">Message</label>
+                                    <textarea rows="5" class="w-full px-4 py-3 border border-[#232323]/20 bg-transparent focus:border-[#232323] outline-none transition-colors text-sm" placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                <button type="submit" class="btn-accent w-full flex items-center justify-center gap-2">Send Message <i data-lucide="send" class="w-4"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#232323] text-[#F2F2F2]">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="py-16 md:py-24 border-b border-[#F2F2F2]/10">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-24">
+                    <div>
+                        <h2 class="font-mono text-3xl md:text-4xl font-bold mb-4">Let's Build Something<br /><span class="text-[#38FF62]">Scalable</span> Together</h2>
+                        <a href="#contact" class="btn-accent inline-flex items-center gap-2 mt-4">Get In Touch <i data-lucide="arrow-up-right" class="w-4"></i></a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="label text-[#F2F2F2]/50 mb-4">Navigation</h3>
+                            <nav class="flex flex-col gap-3">
+                                <a href="#about" class="text-[#F2F2F2]/70 hover:text-[#38FF62] text-sm">About</a>
+                                <a href="#projects" class="text-[#F2F2F2]/70 hover:text-[#38FF62] text-sm">Projects</a>
+                            </nav>
+                        </div>
+                        <div>
+                            <h3 class="label text-[#F2F2F2]/50 mb-4">Connect</h3>
+                            <div class="flex flex-col gap-3">
+                                <a href="#" class="text-[#F2F2F2]/70 hover:text-[#38FF62] text-sm flex items-center gap-2"><i data-lucide="github" class="w-3"></i> GitHub</a>
+                                <a href="#" class="text-[#F2F2F2]/70 hover:text-[#38FF62] text-sm flex items-center gap-2"><i data-lucide="linkedin" class="w-3"></i> LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-[#F2F2F2]/50">
+                <div class="flex items-center gap-2"><span>© 2025</span><span class="text-[#38FF62]">•</span><span>Prakash Bisht</span></div>
+                <div class="flex items-center gap-2"><i data-lucide="coffee" class="w-3"></i> <span>Built with Java mindset</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

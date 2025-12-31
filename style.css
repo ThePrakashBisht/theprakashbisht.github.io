@@ -1,0 +1,146 @@
+/* Custom Portfolio CSS */
+:root {
+    --color-background: #F2F2F2;
+    --bg-white: #FFFFFF;
+    --text-primary: #232323;
+    --text-secondary: rgba(35, 35, 35, 0.7);
+    --border-color: #232323;
+    --border-light: rgba(35, 35, 35, 0.1);
+    --accent-primary: #38FF62;
+    --accent-hover: #2AE052;
+    --accent-foreground: #232323;
+    --grid-unit: 47.6px;
+}
+
+/* Grid Background */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background);
+    background-image: 
+      linear-gradient(to right, var(--text-primary) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--text-primary) 1px, transparent 1px);
+    background-size: 47.6px 47.6px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Typography */
+.hero-title {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(48px, 12vw, 96px); /* Adjusted slightly for mobile */
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.title-big {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.text-big {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.text-regular, .text-body {
+    font-family: 'Inter', sans-serif;
+}
+
+.label, .label-small, .header-logo, .nav-link, .btn-primary, .btn-accent {
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.header-logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+.nav-link {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    transition: color 0.2s ease;
+}
+
+.label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.label-small {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+/* Sharp Components */
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--text-primary);
+    color: var(--bg-white);
+}
+
+.btn-accent {
+    background: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--accent-foreground);
+    transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+    background: var(--accent-hover);
+}
+
+.sharp-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.sharp-card:hover {
+    border-color: var(--border-color);
+    transform: translateY(-2px);
+}
+
+.badge {
+    border: 1px solid rgba(35, 35, 35, 0.2);
+    padding: 4px 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: rgba(35, 35, 35, 0.7);
+    display: inline-block;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+/* h1{
+    font-size: xx-large;
+} */
